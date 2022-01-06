@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Contact Form
+        </title>
+
+        <link rel="stylesheet" href="form-style.css"/>        
+    </head>
+    <body style="background-color: white;">
+        
+        <nav>
+            <div class="left">
+
+                <img src="assets/logodw.png" alt="gambar1"/>
+                <ul>
+                    <li>
+                        <a href="index.html"><b>Home</b></a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html"><b>Blog</b></a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="right">
+
+                <a href="contact.html">Contact Me</a>
+
+            </div>    
+        </nav>
+        
+        <form style="
+                    width: 400px; 
+                    margin: 50px auto;
+                    
+                    box-shadow: 0px 0px 5px; 
+                    border-radius: 5px; 
+                    border: 1px solid white; 
+                    padding:20px; 
+                    background-color: brown;">
+            <h1 style="text-align: center;">Contact Form</h1>
+            <div>
+                <label for="input-name" style="font-weight:bold; font-size:20px;">Name</label>
+                <br>    
+                <input  id="input-name" 
+                        type="text" 
+                        placeholder="input name"
+                        style="
+                        border-radius: 5px;
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 5px;
+                        box-sizing: border-box;
+                        border: none;
+                        "/>
+            </div>
+            <div>    
+                <label for="input-number" style="font-weight:bold; font-size:20px;">Phone Number</label>
+                <br>
+                <input  id="input-number" 
+                        type="number" 
+                        placeholder="input nomor"
+                        style="
+                        border-radius: 5px;
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 5px;
+                        box-sizing: border-box;
+                        border: none;
+                        "/>
+            </div>
+            <div>
+                <label for="input-email" style="font-weight:bold; font-size:20px;">Email</label>
+                <br>    
+                <input  id="input-email" 
+                        type="email" 
+                        placeholder="input email"
+                        style="
+                        border-radius: 5px;
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 5px;
+                        box-sizing: border-box;
+                        border: none;
+                        ">
+            </div>
+            <div>
+                
+                <label for="input-status" style="font-weight:bold; font-size:20px;">Status</label>
+                <br>
+                <select     id="input-status"
+                            style="
+                            border-radius: 5px;
+                            width: 100%;
+                            padding: 10px;
+                            margin-top: 5px;
+                            box-sizing: border-box;
+                            border: none;
+                            ">
+                    <option value="">-</option>
+                    <option>Lajang</option>
+                    <option>Menikah</option>
+                    <option>Belum Menikah</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="input-messages" style="font-weight:bold; font-size:20px;">Your Messages</label>
+                <br>
+                <textarea   id="input-messages" 
+                            cols="50" 
+                            rows="10" 
+                            style=  "resize:vertical;
+                                    border-radius: 5px;
+                                    width: 100%;
+                                    padding: 10px;
+                                    margin-top: 5px;
+                                    box-sizing: border-box;"
+                            maxlength="10" placeholder="Input Pesan"></textarea>
+            </div>
+
+            <input type="checkbox" style="margin-top: 20px;"><span>Saya telah membaca <a href="#">syarat dan ketentuan</a> yang berlaku.</span>
+
+            <button style="
+                            width: 100px; 
+                            margin: 10px 150px;
+                            padding: 8px 30px;
+                            border-radius: 5px;
+                            background-color: rgba(0, 89, 255, 0.637);
+                            color:white;
+                            border:none;
+                            cursor:pointer;
+                            font-size: 12px;
+                            
+                            "
+                            type="button"
+                            onclick="submitData()"
+                            ><b>Submit</b></button>
+        </form>
+        <script src="form.js"></script>
+    </body>
+</html>
