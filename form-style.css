@@ -3,9 +3,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body{
-    margin:0;
-} */
+body{
+    background-color: brown;
+} 
 
 nav{
     background-color: orange;
@@ -14,8 +14,7 @@ nav{
 }
 
 nav .left{
-    /* background-color: brown; */
-    flex: 50%;
+    flex: 70%;
     padding-left: 90px;
     display:flex;
     align-items: center;
@@ -23,6 +22,10 @@ nav .left{
 
 nav .left li{
     display: inline;
+}
+
+nav .left a{
+    padding: 25px 12px;
 }
 
 nav .left ul li a{
@@ -36,12 +39,10 @@ nav .left ul li a:hover{
 }
 
 nav .right{
-    /* background-color: blue; */
-    flex: 50%;
+    flex: 30%;
     display:flex;
     justify-content: end; 
     align-items: center;
-    padding: 10px;
     padding-right: 80px;
 }
 
@@ -58,28 +59,63 @@ nav .right a:hover{
 }
 
 .container{
-    height: 110vh;
+    height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center ;
-    background-color: brown;
 }
 
 .container .section{
-    /* background-color: hotpink; */
-    
     display: flex;
     width: 80%;
 }
 
 .section .left{
-    flex: 30%;
+    flex: 35%;
+}
+
+.container .section .left div{
+    border: 2px solid black;                              
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px;
+    background-color: rgb(95, 51, 51);
+}
+
+.container .section .left div ul li{
+    display: inline;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container .section .left div img{
+    width:100%; 
+    border-radius: 10px;
+}
+
+.container .section .left div p{
+    margin-top: 15px;  
+    text-align: justify;
+    color:white;
+}
+
+.container .section .left div table{
+    margin-top: 15px; 
+    border: 1px solid black;
+    width:100%; 
+    text-align: center; 
+    border-collapse:collapse;
+}
+
+.container .section .left div table td{
+    font-size: 13px;
 }
 
 .section .right{
-    /* background-color: indigo; */
-    flex: 70%;
+    flex: 65%;
     padding-left: 80px;
+    text-align: justify;
 }
 
 .section .right .skill-container{
@@ -88,30 +124,24 @@ nav .right a:hover{
 
 .section .right p{
     margin-top: 10px;
-    /* color: grey; */
-    text-align: justify;
 }
 
 .skill-container{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .skill-container div{
     margin: 10px;
     margin-left: 0px;
     flex: 1;
-    text-align: justify;
 }
 
 .skill-container div img{
     margin-bottom: 10px;
     width: 50px;
     height: 50px;
-}
-
-.skill-container div h1{
-    font-size: 20px;
 }
 
 .skill-container div p{
@@ -129,4 +159,70 @@ nav .right a:hover{
 
 .social-media img{
     width: 50px;
+}
+
+
+/* contact.html */
+
+form{
+    width: 400px; 
+    margin: 50px auto;
+    box-shadow: 0px 0px 5px; 
+    border-radius: 5px; 
+    border: 1px solid black; 
+    padding:20px; 
+    background-color: rgb(224, 207, 51); 
+}
+
+form h1{
+    text-align: center;
+}
+
+form div{
+    padding: 10px;
+}
+
+form div label{
+    font-weight:bold; font-size:20px;
+}
+
+input[type=text], input[type=number], input[type=email], select, textarea{
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: none;
+}
+
+form div textarea{
+    resize:vertical;
+}
+
+form .checkbox1{
+    display: flex;
+}
+
+form .checkbox1 p{
+    padding-left: 10px;
+}
+
+form .checkbox2{
+    display: flex;
+}
+
+form .checkbox2 p{
+    padding-left: 10px;
+}
+
+button{
+    width: 100px; 
+    margin: 10px 150px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(0, 89, 255, 0.637);
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size: 12px;
 }

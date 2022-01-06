@@ -5,21 +5,21 @@
             Contact Form
         </title>
 
-        <link rel="stylesheet" href="form-style.css"/>        
+        <link rel="stylesheet" href="style.css"/>        
     </head>
-    <body style="background-color: white;">
+    <body>
         
         <nav>
             <div class="left">
 
-                <img src="assets/logodw.png" alt="gambar1"/>
+                <a href="index.html"><img src="assets/logodw.png" alt="logodw"/></a>
                 <ul>
                     <li>
                         <a href="index.html"><b>Home</b></a>
                     </li>
 
                     <li>
-                        <a href="blog.html"><b>Blog</b></a>
+                        <a href="#"><b>Blog</b></a>
                     </li>
 
                 </ul>
@@ -32,113 +32,65 @@
             </div>    
         </nav>
         
-        <form style="
-                    width: 400px; 
-                    margin: 50px auto;
-                    
-                    box-shadow: 0px 0px 5px; 
-                    border-radius: 5px; 
-                    border: 1px solid white; 
-                    padding:20px; 
-                    background-color: brown;">
-            <h1 style="text-align: center;">Contact Form</h1>
+        <form>
+            <h1>Contact Form</h1>
             <div>
-                <label for="input-name" style="font-weight:bold; font-size:20px;">Name</label>
+                <label for="input-name">Name</label>
                 <br>    
                 <input  id="input-name" 
                         type="text" 
                         placeholder="input name"
-                        style="
-                        border-radius: 5px;
-                        width: 100%;
-                        padding: 10px;
-                        margin-top: 5px;
-                        box-sizing: border-box;
-                        border: none;
-                        "/>
+                        />
             </div>
             <div>    
-                <label for="input-number" style="font-weight:bold; font-size:20px;">Phone Number</label>
+                <label for="input-number">Phone Number</label>
                 <br>
                 <input  id="input-number" 
                         type="number" 
                         placeholder="input nomor"
-                        style="
-                        border-radius: 5px;
-                        width: 100%;
-                        padding: 10px;
-                        margin-top: 5px;
-                        box-sizing: border-box;
-                        border: none;
-                        "/>
+                        />
             </div>
             <div>
-                <label for="input-email" style="font-weight:bold; font-size:20px;">Email</label>
+                <label for="input-email">Email</label>
                 <br>    
                 <input  id="input-email" 
                         type="email" 
                         placeholder="input email"
-                        style="
-                        border-radius: 5px;
-                        width: 100%;
-                        padding: 10px;
-                        margin-top: 5px;
-                        box-sizing: border-box;
-                        border: none;
-                        ">
+                        />
             </div>
             <div>
                 
-                <label for="input-status" style="font-weight:bold; font-size:20px;">Status</label>
+                <label for="input-status">Status</label>
                 <br>
-                <select     id="input-status"
-                            style="
-                            border-radius: 5px;
-                            width: 100%;
-                            padding: 10px;
-                            margin-top: 5px;
-                            box-sizing: border-box;
-                            border: none;
-                            ">
-                    <option value="">-</option>
-                    <option>Lajang</option>
-                    <option>Menikah</option>
-                    <option>Belum Menikah</option>
+                <select id="input-status">
+                    <option value="">Select Status</option>
+                    <option>It's Working</option>
+                    <option>It's not Working</option>
+                    <option>It's not completed yet</option>
+                    <option>There is an Undidentified Error</option>
                 </select>
             </div>
 
             <div>
-                <label for="input-messages" style="font-weight:bold; font-size:20px;">Your Messages</label>
+                <label for="input-messages">Your Messages</label>
                 <br>
-                <textarea   id="input-messages" 
-                            cols="50" 
-                            rows="10" 
-                            style=  "resize:vertical;
-                                    border-radius: 5px;
-                                    width: 100%;
-                                    padding: 10px;
-                                    margin-top: 5px;
-                                    box-sizing: border-box;"
-                            maxlength="10" placeholder="Input Pesan"></textarea>
+                <textarea id="input-messages" cols="50" rows="10" maxlength="100" placeholder="input Pesan"></textarea>
+            </div>
+            <div class="checkbox1">
+                <input type="checkbox" id="aggreement1" value="Saya telah baca">
+                <p>Saya telah membaca <a href="#"><b>syarat dan ketentuan</b></a> yang berlaku.<p>
             </div>
 
-            <input type="checkbox" style="margin-top: 20px;"><span>Saya telah membaca <a href="#">syarat dan ketentuan</a> yang berlaku.</span>
+            <div class="checkbox2">
+                <input type="checkbox" id="aggreement2" value="dan saya setuju">
+                <p>Saya menyetujui syarat dan ketentuan yang berlaku<p>
+            </div>
+            
 
-            <button style="
-                            width: 100px; 
-                            margin: 10px 150px;
-                            padding: 8px 30px;
-                            border-radius: 5px;
-                            background-color: rgba(0, 89, 255, 0.637);
-                            color:white;
-                            border:none;
-                            cursor:pointer;
-                            font-size: 12px;
-                            
-                            "
-                            type="button"
-                            onclick="submitData()"
-                            ><b>Submit</b></button>
+            <button type="button"
+                    onclick="submitData()"
+                    ><b>Submit</b>
+            </button>
         </form>
         <script src="form.js"></script>
     </body>
