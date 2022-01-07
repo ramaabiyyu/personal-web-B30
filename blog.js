@@ -227,8 +227,8 @@ function getDistanceTime(time){
   let secondInHours = 3600 //second dalam satu jam
   let hoursInDay = 23 //karena hitungan hours dari 0 - 23
 
-  let minutes = 60
-  let seconds = 60
+  let minutes = 60 //minutes dalam hours
+  let seconds = 60 //seconds dalam minutes
   
 
   let distanceDay = Math.floor(distance / (milisecond * secondInHours * hoursInDay))

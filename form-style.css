@@ -4,59 +4,60 @@
 }
 
 body{
-    background-color: brown;
+    background-color: rgb(88, 76, 76);
 } 
 
-nav{
-    background-color: orange;
-    display:flex;
-    height: 10vh;
-}
-
-nav .left{
-    flex: 70%;
+nav {
+    display: flex;
+    background: #f4f3f3;
+    height: 7vh;
+  }
+  
+  nav div {
+    display: flex;
+    align-items: center;
+    flex: 50%;
+  }
+  
+  nav div.left-side {
     padding-left: 90px;
-    display:flex;
-    align-items: center;
-}
-
-nav .left li{
+  }
+  
+  nav div.right-side {
+    padding-right: 90px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin-left: 40px;
+  }
+  
+  nav ul li {
     display: inline;
-}
-
-nav .left a{
-    padding: 25px 12px;
-}
-
-nav .left ul li a{
+    margin-left: 40px;
+  }
+  
+  nav ul li a {
+    color: #000000;
     text-decoration: none;
-    color: black;
-    padding: 25px 12px;
-}
-
-nav .left ul li a:hover{
-    background-color: orangered;
-}
-
-nav .right{
-    flex: 30%;
-    display:flex;
-    justify-content: end; 
-    align-items: center;
-    padding-right: 80px;
-}
-
-nav .right a{
-    background-color: rgb(202, 67, 26);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
+  }
+  
+  nav ul li a.list-active {
+    color: #ec4d37;
+    font-weight: 700;
+  }
+  
+  nav .right-side a {
+    font-size: 15px;
+    padding: 8px 20px;
+    background-color: #ec4d37;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
     text-decoration: none;
-}
-
-nav .right a:hover{
-    background-color: orangered;
-}
+  }
 
 .container{
     height: 120vh;
@@ -78,8 +79,8 @@ nav .right a:hover{
     border: 2px solid black;                              
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px;
-    background-color: rgb(95, 51, 51);
+    box-shadow: 0px 0px 10px;
+    background-color: rgb(236, 157, 92);
 }
 
 .container .section .left div ul li{
@@ -94,10 +95,14 @@ nav .right a:hover{
     border-radius: 10px;
 }
 
+.container .section .left div h1{
+    color: rgb(255, 60, 1);
+}
+
 .container .section .left div p{
     margin-top: 15px;  
     text-align: justify;
-    color:white;
+    color:rgb(63, 60, 60);
 }
 
 .container .section .left div table{
@@ -122,6 +127,10 @@ nav .right a:hover{
     display: flex;
 }
 
+.section .right h1{
+    color: rgb(255, 60, 1);
+}
+
 .section .right p{
     margin-top: 10px;
 }
@@ -130,6 +139,10 @@ nav .right a:hover{
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: left;
+}
+
+.skill-container div h3{
+    color: rgb(255, 60, 1);
 }
 
 .skill-container div{
@@ -146,6 +159,10 @@ nav .right a:hover{
 
 .skill-container div p{
     padding-right: 15px;
+}
+
+.section .right h5{
+    color: cyan;
 }
 
 .section .right .social-media{

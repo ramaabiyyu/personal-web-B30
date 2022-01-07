@@ -1,104 +1,51 @@
-// alert("Selamat siang B30") //memberi pemberitahuan
-
-// document.write("Halo batch 30") //memberikan tulisan
-
-// console.log("Selamat") //untuk informasi Debug
-
-//variabel
-//tipe data
-
-// let firstName = "Muhammad Abiyyu"
-// let lastName = "Rama"
-
-// let gelas = "Kopi"
-// console.log(gelas)
-
-//var let const
-
-//var bisa di deklarasikan ulang
-// var piring = "nasi"
-// var piring = "lauk"
-
-// //let tidak bisa dideklarasikan ulang
-// let gelas = "Kopi"
-// gelas = "Susu"
-
-// //const data tidak dapat diubah/tetap
-// const mangkok = "Mie Ayam"
-// //mangkok = "Bakso"
-
-// console.log(piring)
-// console.log(gelas)
-// console.log(mangkok)
-
-// let firstName = "Muhammad Abiyyu"
-// let lastName = "Rama"
-// let age = 20
-
-// //ada dua metode penulisan
-// let allData = "Nama Depan "+firstName+" Nama Belakang "+lastName+" Umur "+age
-// let allData2 = `Nama Depan ${firstName} Nama Belakang ${lastName} Umur ${age}`
-
-// console.log(allData);
-// console.log(allData2);
-
-// //function
-
-// function getData(day, year){
-//     console.log(firstName);
-//     console.log(lastName);
-//     console.log(age);
-
-//     console.log(day);
-//     console.log(year);
-// }
-
-// getData("Jumat", 2021);
-
-// //variasi cara pengolahan data bisa angka maupun teks
-// function penjumlahan(bilangan1, bilangan2){
-//     return bilangan1 + bilangan2
-// }
-
-// console.log(penjumlahan(20,10));
-
-// function sum(bill1, bill2){
-//     let result = bill1 + bill2
-
-//     console.log(result)
-// }
-
-// sum(20, 50);
-
-
 function submitData(){
     
     let name = document.getElementById("input-name").value
 
-    // console.log(name);
+    console.log(name);
 
     let phonenumber = document.getElementById("input-number").value
 
-    // console.log(phonenumber);
+    console.log(phonenumber);
 
     let email = document.getElementById("input-email").value
 
-    // console.log(email);
+    console.log(email);
 
     let status = document.getElementById("input-status").value
 
-    // console.log(status);
+    console.log(status);
 
     let messages = document.getElementById("input-messages").value
 
-    // console.log(messages);
+    console.log(messages);
+
+    let aggreement1 = document.getElementById("aggreement1").checked
+    let aggreement2= document.getElementById("aggreement2").checked
+
+    if(aggreement1){
+        aggreement1 = (document.getElementById("aggreement1").value);
+    } else{
+        aggreement1 = ""
+    }
+
+    if(aggreement2){
+        aggreement2 = (document.getElementById("aggreement2").value);
+    } else{
+        aggreement2 = ""
+    }
+
+    console.log(aggreement1)
+    console.log(aggreement2)
 
     let dataObject = {
         name: name,
         phonenumber: phonenumber,
         email: email,
         status: status,
-        messages: messages    
+        messages: messages,
+        aggreement1: aggreement1,
+        aggreement2: aggreement2    
     }
 
     console.log(dataObject)
@@ -115,22 +62,16 @@ function submitData(){
         alert("Status wajib diisi")
     } else if(messages == ""){
         alert("Message wajib diisi")
+    } else if(aggreement1 == ""){
+        alert("Mohon baca syarat dan ketentuan yang berlaku")
+    } else if(aggreement2 == ""){
+        alert("Mohon setujui syarat dan ketentuan yang berlaku")
     } else {
-        // let emailReceiver = "ramapnj81@gmail.com"
+        let emailReceiver = "ramapnj81@gmail.com"
 
         let a = document.createElement("a")
 
-        a.href = `mailto: ${email}?subject=${status}&body=Hallo my name is ${name} ${messages} contact me ${phonenumber}`
-        a.click()
-
-        
+        a.href = `mailto: ${emailReceiver}?subject=${status}&body=Hallo my name is ${name} ${messages} Please contact me on ${phonenumber} and Send the Confirmation to ${email}`
+        a.click()      
     }
-    
-    // if(name == "" || email =="" || phonenumber == "" || status == "" || messages == ""){
-    //     alert("Semua wajib diisi")
-    // }
-    
-    
-
-
 }
