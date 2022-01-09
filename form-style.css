@@ -61,7 +61,7 @@ nav {
   }
 
 .container{
-    height: 120vh;
+    height: 150vh;
     display: flex;
     align-items: center;
     justify-content: center ;
@@ -134,6 +134,7 @@ nav {
 
 .section .right p{
     margin-top: 10px;
+    color: rgb(236, 220, 200);
 }
 
 .skill-container{
