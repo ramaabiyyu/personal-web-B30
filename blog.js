@@ -128,12 +128,6 @@ function addBlog(event) {
 
     blogs.push(blog)
 
-    // console.log(blog);
-    // console.log(blogs);
-
-    // for(let i = 0; i < blogs.length; i++){
-    //     console.log(blogs[i]);
-    // }
 
     renderBlog()
 }
@@ -189,7 +183,7 @@ function renderBlog() {
 // console.log(time.getFullYear());
 // console.log(time.getMonth());
 
-let month = ["January", "Februari", "March", "April", "May", "June", "August", "September", "October", "November", "December"]
+let month = ["January", "February", "March", "April", "May", "June", "August", "September", "October", "November", "December"]
 
 function getFullTime(time){
 
@@ -223,8 +217,8 @@ function getDistanceTime(time){
 
   // console.log(distance);
 
-  let milisecond = 1000 //milisecond dalam satu detik
-  let secondInHours = 3600 //second dalam satu jam
+  let milisecond = 1000 //nilai satu detik dalam milisecond
+  let secondInHours = 3600 //nilai detik dalam satu jam
   let hoursInDay = 23 //karena hitungan hours dari 0 - 23
 
   let minutes = 60 //minutes dalam hours
@@ -232,7 +226,7 @@ function getDistanceTime(time){
   
 
   let distanceDay = Math.floor(distance / (milisecond * secondInHours * hoursInDay))
-  let distanceHours = Math.floor(distance / (milisecond * minutes * seconds))
+  let distanceHours = Math.floor(distance / (milisecond * seconds * minutes))
   let distanceMinutes = Math.floor(distance / (milisecond * minutes))
   let distanceSeconds = Math.floor(distance/ (milisecond))
 
