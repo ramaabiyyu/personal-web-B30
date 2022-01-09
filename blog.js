@@ -225,10 +225,10 @@ function getDistanceTime(time){
   let seconds = 60 //seconds dalam minutes
   
 
-  let distanceDay = Math.floor(distance / (milisecond * secondInHours * hoursInDay))
+  let distanceDay = Math.floor(distance / (milisecond * seconds * minutes * hoursInDay))
   let distanceHours = Math.floor(distance / (milisecond * seconds * minutes))
-  let distanceMinutes = Math.floor(distance / (milisecond * minutes))
-  let distanceSeconds = Math.floor(distance/ (milisecond))
+  let distanceMinutes = Math.floor(distance / (milisecond * seconds))
+  let distanceSeconds = Math.floor(distance / (milisecond))
 
   // distanceDay = Math.floor(distanceDay)//membulatkan bilangan desimal
 
