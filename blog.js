@@ -243,10 +243,10 @@ function getDistanceTime(time){
     } else{
       return(`${distanceSeconds} seconds ago`)
     }
-  }
+}
 
-  setInterval(() =>{
+setInterval(() =>{
 
-    renderBlog()
-  } ,3000)
+  renderBlog()
+} ,3000)
 // getDistanceTime(new Date())
